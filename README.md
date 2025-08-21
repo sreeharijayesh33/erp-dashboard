@@ -1,70 +1,206 @@
-# Getting Started with Create React App
+# ERP User Management Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive ERP user management system built with React, featuring role-based access control and a sleek dark theme with orange accents.
 
-## Available Scripts
+## 🌟 Features
 
-In the project directory, you can run:
+### 🔐 **Role-Based Authentication**
+- **Admin**: Full user management (Create, Read, Update, Delete)
+- **Manager**: View-only access to employee directory
+- **Employee**: Personal profile view only
 
-### `npm start`
+### 🎨 **Modern UI/UX**
+- Dark theme with vibrant orange accent colors
+- Fully responsive design for all devices
+- Smooth animations and hover effects
+- Professional, clean interface
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🛡️ **Security & Access Control**
+- Protected routes based on user roles
+- Context-based state management
+- Secure authentication flow
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ⚡ **Performance**
+- React functional components with hooks
+- Efficient state management
+- Optimized rendering
 
-### `npm test`
+## 🚀 Quick Start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Clone the repository
+git clone https://github.com/sreeharijayesh33/erp-dashboard.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Navigate to project directory
+cd erp-dashboard
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Install dependencies
+npm install
 
-### `npm run eject`
+# Start the development server
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application will open at `http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔑 Demo Accounts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Role | Email | Password |
+|------|-------|----------|
+| **Admin** | admin@erp.com | password123 |
+| **Manager** | manager@erp.com | password123 |
+| **Employee** | employee@erp.com | password123 |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📱 Screenshots
 
-## Learn More
+### Login Page
+- Clean, professional login interface
+- Role-based demo account information
+- Responsive design
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Admin Dashboard
+- Complete user management table
+- Add/Edit/Delete user functionality
+- Role and status management
+- Search and filter capabilities
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Manager Dashboard
+- Employee directory (read-only)
+- Employee status visibility
+- Professional interface
 
-### Code Splitting
+### Employee Dashboard
+- Personal profile view
+- Account details display
+- Edit profile functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🛠️ Tech Stack
 
-### Analyzing the Bundle Size
+- **Frontend**: React 18.x
+- **Icons**: Lucide React
+- **Styling**: Custom CSS with CSS Grid & Flexbox
+- **State Management**: React Context API
+- **Authentication**: Mock API (ready for backend integration)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🏗️ Project Structure
 
-### Making a Progressive Web App
+```
+erp-dashboard/
+├── public/
+├── src/
+│   ├── App.js          # Main application component
+│   ├── App.css         # Styling and theme
+│   ├── index.js        # Application entry point
+│   └── index.css       # Global styles
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🔧 Key Components
 
-### Advanced Configuration
+### Authentication System
+- `AuthContext` - Global authentication state
+- `AuthProvider` - Authentication context provider
+- `Login` - Login interface component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Dashboard Components
+- `Header` - Navigation and user info
+- `UserManagement` - Admin user CRUD operations
+- `EmployeeList` - Manager employee directory
+- `Profile` - Employee profile view
+- `UserModal` - Add/Edit user modal
 
-### Deployment
+### Route Protection
+- `AuthRouter` - Route protection based on authentication
+- Role-based content rendering
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🌐 API Integration
 
-### `npm run build` fails to minify
+The application includes a mock API structure ready for backend integration:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```javascript
+const mockAPI = {
+  login: async (credentials) => { /* ... */ },
+  getUsers: async () => { /* ... */ },
+  // Ready for expansion with real API endpoints
+};
+```
+
+## 🎯 Features by Role
+
+### 👑 Admin Features
+- ✅ View all users in a comprehensive table
+- ✅ Add new users with role assignment
+- ✅ Edit existing user details
+- ✅ Delete users with confirmation
+- ✅ Manage user roles and status
+
+### 👨‍💼 Manager Features
+- ✅ View employee directory
+- ✅ Access employee contact information
+- ✅ Monitor employee status
+- ✅ Professional read-only interface
+
+### 👤 Employee Features
+- ✅ View personal profile
+- ✅ Access account details
+- ✅ Edit profile information
+- ✅ Clean, focused interface
+
+## 🚀 Deployment
+
+### Deploy to Vercel
+```bash
+npm install -g vercel
+vercel
+```
+
+### Deploy to Netlify
+```bash
+npm run build
+# Upload build folder to Netlify
+```
+
+### Deploy to GitHub Pages
+```bash
+npm install --save-dev gh-pages
+npm run build
+npm run deploy
+```
+
+## 🔮 Future Enhancements
+
+- [ ] Real backend API integration
+- [ ] Advanced search and filtering
+- [ ] Data export functionality
+- [ ] Email notifications
+- [ ] Activity logging
+- [ ] Advanced user permissions
+- [ ] Dashboard analytics
+- [ ] Multi-language support
+
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Sreehari Jayesh**
+- GitHub: [@sreeharijayesh33](https://github.com/sreeharijayesh33)
+
+## 🙏 Acknowledgments
+
+- React team for the amazing framework
+- Lucide React for beautiful icons
+- Modern web design inspiration
+
+---
+
+⭐ **Star this repository if you found it helpful!**
